@@ -1,4 +1,4 @@
-/* BOTÓN HAMBURGUESA */
+
 .menu-toggle {
   display: none;
   font-size: 2rem;
@@ -11,10 +11,10 @@
 /* RESPONSIVE: MÓVILES */
 @media (max-width: 800px) {
   .menu-toggle {
-    display: block; /* Mostrar botón hamburguesa en móviles */
+    display: block; 
   }
 
-  /* Panel que despliega el hamburguesa: enlaces + idioma + CTA */
+  /* Panel despliega hamburguesa: enlaces + idioma + CTA */
   .nav-collapse {
     display: none;
     flex-direction: column;
