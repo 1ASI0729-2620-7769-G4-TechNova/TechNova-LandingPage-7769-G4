@@ -1,26 +1,16 @@
 // Selecciona el botón de hamburguesa
 const btn = document.querySelector(".menu-toggle");
 
-// Selecciona el panel de navegación (enlaces + idioma + CTA)
 const navCollapse = document.querySelector(".nav-collapse");
 
-// Al hacer clic en el botón de hamburguesa
 btn.addEventListener("click", () => {
-  // Alterna (agrega o quita) la clase "active" en el panel
   const isOpen = navCollapse.classList.toggle("active");
 
-  // Refleja el estado en el atributo de accesibilidad del botón
   btn.setAttribute("aria-expanded", isOpen);
 });
 
 
-// ---------- Selector de idioma EN/ES ----------
-//
-// Cada texto traducible vive en su propio elemento "hoja" (sin hijos):
-// donde un texto convivía con otro elemento (el punto del eyebrow, la
-// flecha del botón, la palabra en itálica del titular...) se envolvió
-// en su propio <span> en el HTML para que también sea detectable aquí.
-
+// Idioma
 const translations = {
   "Abrir menú": "Open menu",
   "Características": "Features",
@@ -160,9 +150,6 @@ const translations = {
   "© 2026 Todos los derechos reservados": "© 2026 All rights reserved",
 };
 
-// Reduce cualquier bloque de espacios/saltos de línea a un solo espacio,
-// para que un párrafo escrito en varias líneas en el HTML siga
-// coincidiendo con la clave (de una sola línea) del diccionario.
 function normalize(text) {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -178,9 +165,7 @@ translatableElements.forEach((element) => {
   }
 });
 
-// Atributos traducibles (placeholder, aria-label): el texto en inglés
-// vive en data-en-<atributo> del HTML; el original en español se
-// guarda la primera vez que se necesita.
+
 const translatableAttrs = ["placeholder", "aria-label"];
 
 function applyAttrTranslations(isEnglish) {

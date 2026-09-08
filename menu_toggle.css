@@ -14,7 +14,6 @@
     display: block; /* Mostrar botón hamburguesa en móviles */
   }
 
-  /* Panel que despliega el hamburguesa: enlaces + idioma + CTA */
   .nav-collapse {
     display: none;
     flex-direction: column;
