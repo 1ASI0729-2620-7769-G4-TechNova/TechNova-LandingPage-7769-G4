@@ -1,12 +1,11 @@
 /* Footer general */
 .footer {
-  background-color: #222; /* Fondo oscuro para contraste */
+  background-color: #222;
   color: white;
   padding: 2rem 1rem;
   font-family: "Roboto", sans-serif;
 }
 
-/* Contenedor flexible para 3 columnas */
 .footer-container {
   display: flex;
   flex-direction: row;
@@ -46,7 +45,7 @@
   color: #fff;
 }
 
-/* Redes sociales con íconos */
+
 .footer-social {
   flex: 1;
   min-width: 200px;
@@ -63,7 +62,7 @@
   transform: scale(1.2);
 }
 
-/* Responsive para pantallas pequeñas */
+
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
