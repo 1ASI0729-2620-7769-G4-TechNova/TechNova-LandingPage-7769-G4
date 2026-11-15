@@ -1,4 +1,3 @@
-
 const btn = document.querySelector(".menu-toggle");
 
 const navCollapse = document.querySelector(".nav-collapse");
@@ -103,7 +102,7 @@ const translations = {
   "Somos": "We are",
   "Un equipo de estudiantes de la UPC construyendo tecnología para negocios reales. Creemos que la transformación digital no debería ser un privilegio de las grandes empresas — por eso creamos WashTrack: la puerta de entrada de los negocios tradicionales de Latinoamérica a la gestión digital, empezando por las lavanderías.":
     "A team of UPC students building technology for real businesses. We believe digital transformation shouldn't be a privilege of big companies — that's why we created WashTrack: the entry point for traditional Latin American businesses into digital management, starting with laundries.",
-  "Conoce más sobre DevTech": "Learn more about DevTech",
+  "Conoce más sobre TechNova": "Learn more about TechNova",
   "Innovación": "Innovation",
   "Resolver con tecnología, no con más papel": "Solving with technology, not more paperwork",
   "Compromiso": "Commitment",
@@ -119,8 +118,32 @@ const translations = {
 
   "Un plan para cada tamaño": "A plan for every size",
   "de lavandería": "of laundry business",
-  "Estamos definiendo los planes de WashTrack junto a las primeras lavanderías que se suman. Escríbenos y te contamos las opciones disponibles para tu negocio.":
-    "We're defining WashTrack's plans together with the first laundries joining us. Write to us and we'll walk you through the options for your business.",
+  "Suscripciones mensuales para lavanderías. Empieza gratis y mejora tu plan cuando tu negocio crezca. Tus clientes usan WashTrack sin costo adicional.":
+    "Monthly subscriptions for laundries. Start for free and upgrade whenever your business grows. Your customers use WashTrack at no extra cost.",
+  "Gratis": "Free",
+  "/mes": "/month",
+  "Para lavanderías que quieren empezar a digitalizar su operación.":
+    "For laundries that want to start digitizing their operation.",
+  "Registro de clientes y pedidos": "Customer and order registration",
+  "Seguimiento de pedidos en tiempo real para tus clientes": "Real-time order tracking for your customers",
+  "Catálogo de prendas y servicios": "Garment and service catalog",
+  "Empieza gratis": "Start for free",
+  "Más popular": "Most popular",
+  "Básico": "Basic",
+  "Para pequeños negocios que necesitan más gestión y seguimiento.":
+    "For small businesses that need more management and tracking.",
+  "Todo lo del plan Gratis": "Everything in Free",
+  "Notificaciones automáticas de estado": "Automatic status notifications",
+  "Gestión de recojo y entrega a domicilio": "Pickup and home delivery management",
+  "Pagos digitales": "Digital payments",
+  "Elegir Básico": "Choose Basic",
+  "Para lavanderías con un alto volumen de pedidos.": "For laundries with a high volume of orders.",
+  "Todo lo del plan Básico": "Everything in Basic",
+  "Monitoreo IoT predictivo de tus lavadoras": "Predictive IoT monitoring of your washers",
+  "Pedidos prioritarios VIP": "VIP priority orders",
+  "Reportes y métricas operativas": "Reports and operational metrics",
+  "Elegir Premium": "Choose Premium",
+  "¿Tienes dudas sobre los planes?": "Have questions about the plans?",
   "Contáctanos": "Contact us",
 
   "Formulario de Atención": "Contact Form",
@@ -202,3 +225,6 @@ function setLanguage(language) {
 document.querySelectorAll(".lang-option").forEach((option) => {
   option.addEventListener("click", () => setLanguage(option.dataset.lang));
 });
+
+// Idioma por defecto al cargar la página
+setLanguage("en");

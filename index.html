@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="Pie.css" />
@@ -57,8 +58,8 @@
             <div class="nav-actions">
 
                 <div class="lang-switch" role="group" aria-label="Seleccionar idioma" data-en-aria-label="Select language">
-                    <button type="button" class="lang-option" data-lang="en">EN</button>
-                    <button type="button" class="lang-option active" data-lang="es" aria-pressed="true">ES</button>
+                    <button type="button" class="lang-option active" data-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" class="lang-option" data-lang="es" aria-pressed="false">ES</button>
                 </div>
 
                 <a href="https://technova-washtrack-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-cta-header">Comenzar ahora</a>
@@ -411,8 +412,8 @@
                     Un equipo de estudiantes de la UPC construyendo
                     tecnología para negocios reales. Creemos que la
                     transformación digital no debería ser un privilegio
-                    de las grandes empresas, por eso creamos WashTrack es la
-                    la puerta de entrada de los negocios tradicionales de
+                    de las grandes empresas — por eso creamos WashTrack: la
+                    puerta de entrada de los negocios tradicionales de
                     Latinoamérica a la gestión digital, empezando por las
                     lavanderías.
                 </p>
@@ -420,7 +421,6 @@
                 <a href="#contacto" class="btn-secundario">Conoce más sobre TechNova</a>
 
             </div>
-
 
             <div class="valores-grid">
 
@@ -458,24 +458,91 @@
 
         </div>
 
+        <!-- Video About-the-Team (centrado, debajo del texto y los valores) -->
+        <div class="technova-video-fila">
+            <div class="technova-video-wrapper">
+                <iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/LY-cJajUz8s"
+                    title="TechNova - About the Team video" data-i18n-attr="title:about.videoTitle"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
     </section>
 
 
-    <section id="planes" class="seccion-planes">
+    <!-- ================= PLANS (subscription model) ================= -->
+    <section id="planes" class="seccion-planes" aria-labelledby="plans-title">
 
-        <div class="planes-card">
-
-            <p class="eyebrow"><span class="dot"></span><span>Planes</span></p>
-            <h2 class="display-heading"><span>Un plan para cada tamaño</span><br><em>de lavandería</em></h2>
-            <p>
-                Estamos definiendo los planes de WashTrack junto a las
-                primeras lavanderías que se suman. Escríbenos y te
-                contamos las opciones disponibles para tu negocio.
-            </p>
-
-            <a href="https://technova-washtrack-frontend.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-primario"><span>Contáctanos</span> <span class="arrow">→</span></a>
-
+        <div class="planes-cabecera">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span><span
+                        data-i18n="plans.eyebrow">Planes</span></p>
+            <h2 id="plans-title" class="display-heading"><span data-i18n="plans.title1">Un plan para cada tamaño</span><br><em data-i18n="plans.title2">de lavandería</em></h2>
+            <p data-i18n="plans.lead">Suscripciones mensuales para lavanderías. Empieza gratis y mejora tu plan cuando tu negocio crezca. Tus clientes usan WashTrack sin costo adicional.</p>
         </div>
+
+        <ul class="planes-grid">
+
+            <li class="plan-card">
+                <h3 class="plan-nombre" data-i18n="plans.free.name">Gratis</h3>
+                <p class="plan-precio"><strong>S/ 0</strong><span data-i18n="plans.perMonth">/mes</span></p>
+                <p class="plan-desc" data-i18n="plans.free.desc">Para lavanderías que quieren empezar a digitalizar su operación.</p>
+                <ul class="plan-features">
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.free.f1">Registro de clientes y pedidos</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.free.f2">Seguimiento de pedidos en tiempo real para tus clientes</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.free.f3">Catálogo de prendas y servicios</span></li>
+                </ul>
+                <a href="https://washtrack-eb717.web.app/register?role=shift-manager&amp;plan=free"
+                        class="btn-secundario" data-i18n="plans.free.cta">Empieza gratis</a>
+            </li>
+
+            <li class="plan-card destacado">
+                <span class="plan-badge" data-i18n="plans.popular">Más popular</span>
+                <h3 class="plan-nombre" data-i18n="plans.basic.name">Básico</h3>
+                <p class="plan-precio"><strong>S/ 49</strong><span data-i18n="plans.perMonth">/mes</span></p>
+                <p class="plan-desc" data-i18n="plans.basic.desc">Para pequeños negocios que necesitan más gestión y seguimiento.</p>
+                <ul class="plan-features">
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.basic.f1">Todo lo del plan Gratis</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.basic.f2">Notificaciones automáticas de estado</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.basic.f3">Gestión de recojo y entrega a domicilio</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.basic.f4">Pagos digitales</span></li>
+                </ul>
+                <a href="https://washtrack-eb717.web.app/register?role=shift-manager&amp;plan=basic"
+                        class="btn-primario" data-i18n="plans.basic.cta">Elegir Básico</a>
+            </li>
+
+            <li class="plan-card">
+                <h3 class="plan-nombre" data-i18n="plans.premium.name">Premium</h3>
+                <p class="plan-precio"><strong>S/ 99</strong><span data-i18n="plans.perMonth">/mes</span></p>
+                <p class="plan-desc" data-i18n="plans.premium.desc">Para lavanderías con un alto volumen de pedidos.</p>
+                <ul class="plan-features">
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.premium.f1">Todo lo del plan Básico</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.premium.f2">Monitoreo IoT predictivo de tus lavadoras</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.premium.f3">Pedidos prioritarios VIP</span></li>
+                    <li><span class="material-symbols-outlined" aria-hidden="true">check</span><span
+                                data-i18n="plans.premium.f4">Reportes y métricas operativas</span></li>
+                </ul>
+                <a href="https://washtrack-eb717.web.app/register?role=shift-manager&amp;plan=premium"
+                        class="btn-secundario" data-i18n="plans.premium.cta">Elegir Premium</a>
+            </li>
+
+        </ul>
+
+        <p class="planes-contacto">
+            <span data-i18n="plans.contactPrompt">¿Tienes dudas sobre los planes?</span>
+            <a href="#contacto" data-i18n="plans.contactLink">Contáctanos</a>
+        </p>
 
     </section>
 
@@ -487,7 +554,7 @@
         <div class="div-cont-formulario">
 
             <h2>
-                Formulario de Atención 
+                Formulario de Atención
             </h2>
 
             <p>
